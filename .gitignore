@@ -1,1 +1,4 @@
+*.code-workspace
+.DS_Store
+/static-lego-library
 node_modules/
