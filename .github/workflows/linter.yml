@@ -3,9 +3,9 @@ name: Linter
 
 on:
   push:
-    branches-ignore: [master]
+    branches-ignore: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
         env:
           CSS_FILE_NAME: .stylelintrc.yml
           DEFAULT_BRANCH: main
-          FILTER_REGEX_EXCLUDE: node_modules\/.*
+          FILTER_REGEX_EXCLUDE: .*node_modules\/.*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: ./
           VALIDATE_JAVASCRIPT_STANDARD: false
