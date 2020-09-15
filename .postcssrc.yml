@@ -1,0 +1,7 @@
+---
+plugins:
+    postcss-import:
+        path: src/components
+    autoprefixer:
+        cascade: false
+    postcss-extend-rule:
