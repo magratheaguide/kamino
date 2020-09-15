@@ -16,7 +16,7 @@ const handlebars = require('@frctl/handlebars')({
     helpers: {
         placeholderImage: function(block) {
             const options = block.hash || {};
-            return simpleSvgPlaceholder({ ...svgDefaults, ...options });
+            return simpleSvgPlaceholder(Object.assign({}, svgDefaults, options));
         },
     }
 });

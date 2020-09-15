@@ -15,7 +15,7 @@ overrides:
           no-undef: off
           prefer-template: off
 parserOptions:
-    ecmaVersion: 2015
+    ecmaVersion: 6
 rules:
     no-console: warn
     no-template-curly-in-string: warn
