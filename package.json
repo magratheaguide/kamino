@@ -1,0 +1,23 @@
+{
+  "name": "kamino",
+  "version": "0.0.0",
+  "description": "Setup template for forum roleplay theming projects",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rp-magrathea/kamino.git"
+  },
+  "keywords": [
+    "jcink",
+    "theme",
+    "forum-rp",
+    "rp"
+  ],
+  "author": "Daine (https://daine.dev)",
+  "bugs": {
+    "url": "https://github.com/rp-magrathea/kamino/issues"
+  },
+  "homepage": "https://github.com/rp-magrathea/kamino#readme"
+}
