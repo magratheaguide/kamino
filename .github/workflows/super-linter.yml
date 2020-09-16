@@ -30,6 +30,12 @@ jobs:
             - name: Install dependencies
               run: npm install
 
+            - name: Debugging
+              run: |
+                pwd
+                ls dist
+                ls dist/assets
+
             - name: Lint
               uses: github/super-linter@v3
               env:
