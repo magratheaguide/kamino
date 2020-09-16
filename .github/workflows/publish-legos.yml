@@ -6,8 +6,8 @@ name: Publish the Legos Static Site
 on:
     # TODO: uncomment. we don't want this running in Kamino's repo
     # push:
-        # tags:
-            # - v*
+    #   tags:
+    #       - v*
 
 jobs:
     publish-legos:

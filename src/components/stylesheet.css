@@ -16,4 +16,7 @@ TODO: add other team members, credits, license info, etc.
 ==========
 */
 
-/* @import individual files here */
+@import "01-settings/_utopia.css";
+
+@import "02-base/_base.css";
+@import "02-base/_reset.css";
