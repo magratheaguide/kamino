@@ -1,0 +1,22 @@
+/*
+==========
+SITE NAME
+v1.0.0 THEME CODENAME
+A Magrathea project, coded by Daine
+-----
+Magrathea:
+    - https://magrathea.guide
+
+Daine:
+    - https://daine.dev
+    - Discord: daine#1078
+
+TODO: update site and theme code name
+TODO: add other team members, credits, license info, etc.
+==========
+*/
+
+@import "01-settings/_utopia.css";
+
+@import "02-base/_base.css";
+@import "02-base/_reset.css";

@@ -1,0 +1,22 @@
+{
+    "extends": [
+        "html-validate:recommended"
+    ],
+    "rules": {
+        "class-pattern": [
+            "error",
+            {
+                "pattern": "^(?:layout-|lego-|override-|js-|__|\\-\\-)[a-z][a-z0-9-]*(?:{{){0,1}$|^[a-z][a-z0-9-]*(?:{{){0,1}$|^}}$|^<!--$|^\\|[a-z][a-z_]+\\|$|^-->$"
+            }
+        ],
+        "id-pattern": [
+            "error",
+            {
+                "pattern": "kebabcase"
+            }
+        ],
+        "input-missing-label": "error",
+        "no-inline-style": "off",
+        "no-style-tag": "error"
+    }
+}

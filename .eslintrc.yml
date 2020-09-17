@@ -1,0 +1,23 @@
+---
+env:
+    browser: true
+    es6: true
+extends:
+    - eslint:recommended
+    - prettier
+globals:
+    Atomics: readonly
+    SharedArrayBuffer: readonly
+overrides:
+    - files:
+          - src/components/**/*.config.js
+      rules:
+          no-undef: off
+          prefer-template: off
+parserOptions:
+    ecmaVersion: 6
+rules:
+    no-console: warn
+    no-template-curly-in-string: warn
+    no-useless-concat: error
+    prefer-template: error

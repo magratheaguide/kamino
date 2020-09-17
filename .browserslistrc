@@ -1,0 +1,5 @@
+# supported browsers
+
+defaults
+not OperaMini all # Excluding because it doesn't support viewport units
+not IE <= 11 # Excluding because it doesn't support CSS custom properties

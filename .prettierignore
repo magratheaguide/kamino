@@ -1,0 +1,9 @@
+*.code-workspace
+*.hbs
+/dist/assets
+/dist/forum-description.html
+/node_modules
+/package-lock.json
+/static-lego-library
+.DS_Store
+.vscode
