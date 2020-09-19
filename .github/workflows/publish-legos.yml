@@ -3,8 +3,7 @@
 
 name: Publish the Legos Static Site
 
-on:
-    workflow_dispatch
+on: workflow_dispatch
     # TODO: uncomment. we don't want this running in Kamino's repo
     #release:
     #    types: [published]

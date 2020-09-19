@@ -7,7 +7,7 @@ on:
 
 jobs:
     lint:
-        name: Run Linters
+        name: Super-Linter
         runs-on: ubuntu-latest
 
         steps:
@@ -41,7 +41,7 @@ jobs:
                   VALIDATE_JAVASCRIPT_STANDARD: false
 
     prettier:
-        name: Check Prettier
+        name: Prettier
         runs-on: ubuntu-latest
 
         steps:
@@ -64,5 +64,5 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Run Prettier
+            - name: Prettier check
               run: npm run-script prettier-check
