@@ -1,0 +1,5 @@
+{
+    "eslint.lintTask.options": "--config tools/.eslintrc.*",
+    "prettier.configPath": "tools/.prettierrc.yml",
+    "prettier.ignorePath": "tools/.prettierignore"
+}
