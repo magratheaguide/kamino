@@ -1,0 +1,14 @@
+# file types
+*.code-workspace
+*.hbs
+
+# directories
+**/dist/assets/
+.vscode/
+node_modules/
+static-lego-library/
+
+# specific files
+**/dist/forum-description.html
+.DS_Store
+package-lock.json

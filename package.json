@@ -52,8 +52,8 @@
         "lint:js": "npx eslint --config tools/.eslintrc.yml \"dist/**/*.js\" || echo 'failures found'",
         "postcss": "npx postcss --config tools src/components/stylesheet.css -o dist/assets/stylesheet.css",
         "postcss-watch": "npm run-script postcss -- --watch",
-        "prettier-check": "npx prettier --check . || echo ",
-        "prettier-write": "npx prettier --write .",
+        "prettier-check": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --check . || echo ",
+        "prettier-write": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --write .",
         "stylelint-check": "stylelint-config-prettier-check || echo ",
         "target-browsers": "npx browserslist"
     },
