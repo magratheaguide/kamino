@@ -37,5 +37,5 @@ jobs:
                   DEFAULT_BRANCH: main
                   FILTER_REGEX_EXCLUDE: .*node_modules.*|.*dist\/assets\/stylesheet.css
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  LINTER_RULES_PATH: ./
+                  LINTER_RULES_PATH: tools
                   VALIDATE_JAVASCRIPT_STANDARD: false

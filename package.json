@@ -82,7 +82,7 @@
         "lint:css": "npx stylelint \"{src,dist}/**/*.{css,html,js}\" --allow-empty-input",
         "lint:css-error": "npm run-script lint:css -- --quiet || echo 'failures found'",
         "lint:css-warning": "npm run-script lint:css || echo 'failures found'",
-        "lint:html": "npx html-validate \"{src,dist}/**/*.{html,hbs,js}\" || echo 'failures found'",
+        "lint:html": "npx htmlhint --config tools/.htmlhintrc \"{src,dist}/**/*.{html,hbs,js}\" || echo 'failures found'",
         "lint:js": "npx eslint \"dist/**/*.js\" || echo 'failures found'",
         "postcss": "npx postcss src/components/stylesheet.css -o dist/assets/stylesheet.css",
         "postcss-watch": "npm run-script postcss -- --watch",
