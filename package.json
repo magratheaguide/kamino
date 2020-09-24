@@ -57,5 +57,5 @@
         "stylelint-check": "stylelint-config-prettier-check || echo ",
         "target-browsers": "npx browserslist"
     },
-    "version": "1.3.0"
+    "version": "1.3.1"
 }
