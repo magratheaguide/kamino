@@ -6,7 +6,7 @@
 **/dist/assets/
 .vscode/
 node_modules/
-static-lego-library/
+static/
 
 # specific files
 **/dist/forum-description.html

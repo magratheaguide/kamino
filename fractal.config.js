@@ -3,9 +3,8 @@
 /* eslint no-undef: "off" */
 
 const path = require("path");
-const mandelbrot = require("@frctl/mandelbrot");
 const fractal = (module.exports = require("@frctl/fractal").create());
-const casual = require("casual");
+const theme = require("@frctl/mandelbrot");
 const simpleSvgPlaceholder = require("@cloudfour/simple-svg-placeholder");
 
 const svgDefaults = {
@@ -23,26 +22,31 @@ const handlebars = require("@frctl/handlebars")({
     },
 });
 
-const myCustomisedTheme = mandelbrot({
-    skin: "white",
+const themeCustomize = theme({
     format: "yaml",
-    nav: ["docs", "components"],
+    nav: ["search", "docs", "components"],
+    panels: [
+        "html",
+        // "view",
+        // "context",
+        // "resources",
+        // "info",
+        "notes",
+    ],
+    skin: "white",
 });
 
-fractal.set("project.title", "Bright Lego Library");
+fractal.set("project.title", "NAME Lego Library");
 
 fractal.components.engine(handlebars);
 fractal.components.set("path", path.join(__dirname, "/src/components"));
 fractal.components.set("default.preview", "@preview");
 fractal.components.set("default.status", "wip");
-fractal.components.set("default.context", {
-    datetime: casual.moment.format("MMM Do, YYYY h:mm A"),
-});
 
 fractal.docs.engine(handlebars);
 fractal.docs.set("path", path.join(__dirname, "/src/docs"));
 fractal.docs.set("default.status", "draft");
 
 fractal.web.set("static.path", path.join(__dirname, "/dist/assets"));
-fractal.web.set("builder.dest", path.join(__dirname, "/static-lego-library"));
-fractal.web.theme(myCustomisedTheme);
+fractal.web.set("builder.dest", path.join(__dirname, "/static/lego-library"));
+fractal.web.theme(themeCustomize);
