@@ -40,8 +40,8 @@
         "url": "git+https://github.com/rp-magrathea/kamino.git"
     },
     "scripts": {
-        "build": "npm run-script prettier-write && npm run-script postcss && npm run-script fractal-build",
-        "dev-watch": "npm run-script postcss-watch & npm run-script fractal-watch",
+        "build": "npm run-script prettier:write && npm run-script postcss:run && npm run-script fractal:build",
+        "dev-watch": "npm run-script postcss:watch & npm run-script fractal:start",
         "fractal:build": "fractal build",
         "fractal:start": "fractal start --sync",
         "lint": "npm run-script lint:css-error ; npm run-script lint:html ; npm run-script lint:js",
@@ -51,7 +51,7 @@
         "lint:html": "npx htmlhint --config tools/.htmlhintrc \"{src,dist}/**/*.{html,hbs,js}\" || echo 'failures found'",
         "lint:js": "npx eslint --config tools/.eslintrc.yml \"dist/**/*.js\" || echo 'failures found'",
         "postcss:run": "npx postcss --config tools src/components/stylesheet.css -o dist/assets/stylesheet.css",
-        "postcss:watch": "npm run-script postcss -- --watch",
+        "postcss:watch": "npm run-script postcss:run -- --watch",
         "prettier:check": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --check .",
         "prettier:write": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --write .",
         "target-browsers": "npx browserslist"
