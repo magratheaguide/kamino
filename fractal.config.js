@@ -5,7 +5,6 @@
 const path = require("path");
 const mandelbrot = require("@frctl/mandelbrot");
 const fractal = (module.exports = require("@frctl/fractal").create());
-const casual = require("casual");
 const simpleSvgPlaceholder = require("@cloudfour/simple-svg-placeholder");
 
 const svgDefaults = {
@@ -35,9 +34,6 @@ fractal.components.engine(handlebars);
 fractal.components.set("path", path.join(__dirname, "/src/components"));
 fractal.components.set("default.preview", "@preview");
 fractal.components.set("default.status", "wip");
-fractal.components.set("default.context", {
-    datetime: casual.moment.format("MMM Do, YYYY h:mm A"),
-});
 
 fractal.docs.engine(handlebars);
 fractal.docs.set("path", path.join(__dirname, "/src/docs"));
