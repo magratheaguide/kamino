@@ -76,7 +76,6 @@ picture {
     max-width: 100%;
 }
 
-/* Blur images when they have no alt attribute */
 img:not([alt]) {
     outline: 5px solid red;
 }
@@ -89,13 +88,6 @@ select {
     font: inherit;
     letter-spacing: inherit;
     word-spacing: inherit;
-}
-
-/* Remove default padding and list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-    list-style: none;
-    padding: 0;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
