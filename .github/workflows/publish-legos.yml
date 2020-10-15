@@ -37,4 +37,4 @@ jobs:
               run: |
                   npm install
                   npm run-script fractal-build
-                  aws s3 sync static-lego-library/ s3://legos-NAME.magrathea.guide
+                  aws s3 sync static/lego-library/ s3://legos-NAME.magrathea.guide
