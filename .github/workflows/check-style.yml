@@ -69,4 +69,4 @@ jobs:
               run: npm install
 
             - name: Prettier check
-              run: npm run-script prettier-check
+              run: npm run-script prettier:check

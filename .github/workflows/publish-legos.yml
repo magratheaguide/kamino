@@ -36,5 +36,5 @@ jobs:
               # TODO: update NAME to match project!
               run: |
                   npm install
-                  npm run-script fractal-build
+                  npm run-script fractal:build
                   aws s3 sync static/lego-library/ s3://legos-NAME.magrathea.guide

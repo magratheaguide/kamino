@@ -33,5 +33,5 @@ jobs:
             - name: Compile and Diff Check
               run: |
                   npm install
-                  npm run-script postcss
+                  npm run-script postcss:run
                   git diff --exit-code dist/assets/stylesheet.css
