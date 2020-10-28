@@ -1,8 +1,6 @@
 {
     "author": "Daine (https://daine.dev)",
-    "bugs": {
-        "url": "https://github.com/rp-magrathea/kamino/issues"
-    },
+    "bugs": "https://github.com/rp-magrathea/kamino/issues",
     "dependencies": {
         "@cloudfour/simple-svg-placeholder": "^1.0.2",
         "@frctl/fractal": "^1.3.0",
@@ -14,7 +12,7 @@
     },
     "description": "Setup template for forum roleplay theming projects",
     "devDependencies": {
-        "@rp-magrathea/stylelint-alphabetical-clockwise-order": "git://github.com/rp-magrathea/stylelint-alphabetical-clockwise-order.git#v1.0.0",
+        "@rp-magrathea/stylelint-alphabetical-clockwise-order": "rp-magrathea/stylelint-alphabetical-clockwise-order.git#semver:^1.0.0",
         "eslint": "^7.11.0",
         "eslint-config-prettier": "^6.12.0",
         "faker": "^5.1.0",
@@ -33,15 +31,13 @@
         "forum-rpg",
         "rpg"
     ],
+    "license": "SEE LICENSE IN LICENSE",
     "name": "kamino",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/rp-magrathea/kamino.git"
-    },
+    "repository": "github:rp-magrathea/kamino",
     "scripts": {
         "build": "npm run-script prettier:write && npm run-script postcss:run && npm run-script fractal:build",
-        "build:lint": "npm run-script lint && npm run-script build",
-        "dev-watch": "npm run-script postcss:watch & npm run-script fractal:start",
+        "build-lint": "npm run-script lint && npm run-script build",
+        "dev": "npm run-script postcss:watch & npm run-script fractal:start",
         "fractal:build": "fractal build",
         "fractal:start": "fractal start --sync",
         "lint": "( exit_code=0 ; npm run-script lint:css-error || exit_code=$? ; npm run-script lint:html || exit_code=$? ; npm run-script lint:js || exit_code=$? ; (( $exit_code == 0 )) )",
@@ -52,8 +48,9 @@
         "lint:js": "npx eslint --config tools/.eslintrc.yml --no-error-on-unmatched-pattern \"dist/**/*.js\"",
         "postcss:run": "npx postcss --config tools src/components/stylesheet.css -o dist/assets/stylesheet.css",
         "postcss:watch": "npm run-script postcss:run -- --watch",
-        "prettier:check": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --check .",
-        "prettier:write": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore --write .",
+        "prettier:base": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore",
+        "prettier:check": "npm run-script prettier:base -- --check .",
+        "prettier:write": "npm run-script prettier:base -- --write .",
         "target-browsers": "npx browserslist"
     },
     "version": "1.4.0"
