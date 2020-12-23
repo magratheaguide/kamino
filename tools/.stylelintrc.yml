@@ -30,6 +30,8 @@ rules:
     order/order:
         - type: at-rule
           name: extend
+        - type: at-rule
+          name: keyframes
         - custom-properties
         - dollar-variables
         - at-variables
