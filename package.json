@@ -53,5 +53,5 @@
         "prettier:write": "npm run-script prettier:base -- --write .",
         "target-browsers": "npx browserslist"
     },
-    "version": "1.4.0"
+    "version": "1.4.1"
 }
