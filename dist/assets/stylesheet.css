@@ -18,110 +18,96 @@ TODO: add other team members, credits, license info, etc.
 
 /*
 -----
-SETTINGS/UTOPIA
-Courtesy of https://utopia.fyi
-Some modifications made
+SETTINGS/SIZES
 -----
 */
 
-/* @link https://utopia.fyi/generator?c=320,16,1.2,1500,20,1.333,5,1, */
+:root {
+    /* ----- SIZES */
+    --size-scale: 1.2;
+
+    --size-40: calc(var(--size-50) / var(--size-scale));
+    --size-50: 1rem;
+    --size-60: calc(var(--size-50) * var(--size-scale));
+    --size-70: calc(var(--size-60) * var(--size-scale));
+    --size-80: calc(var(--size-70) * var(--size-scale));
+    --size-90: calc(var(--size-80) * var(--size-scale));
+    --size-100: calc(var(--size-90) * var(--size-scale));
+
+    --size-h1: var(--size-100);
+    --size-h2: var(--size-90);
+    --size-h3: var(--size-80);
+    --size-h4: var(--size-70);
+    --size-h5: var(--size-60);
+    --size-h6: var(--size-50);
+
+    /* ----- GAPS */
+    --gap-30: 6px;
+    --gap-40: var(--size-40);
+    --gap-50: var(--size-50);
+    --gap-60: var(--size-60);
+    --gap-70: var(--size-70);
+    --gap-80: var(--size-80);
+    --gap-90: var(--size-90);
+    --gap-100: var(--size-100);
+}
+
+/*
+-----
+SETTINGS/COLORS
+-----
+*/
 
 :root {
-    --px-per-rem: 16;
-    --fluid-min-width: (320 / var(--px-per-rem));
-    --fluid-max-width: (
-        1500 / var(--px-per-rem)
-    ); /* if changed, don't forget media query */
-    --fluid-min-size: 1; /* in rem */
-    --fluid-max-size: 1.25; /* in rem */
-    --fluid-min-ratio: 1.2;
-    --fluid-max-ratio: 1.333;
+    /* ----- HUES */
+    --hue-alpha: 45;
+    --hue-beta: 90;
+    --hue-gamma: 135;
 
-    --fluid-screen: 100vw;
-    --fluid-bp: calc(
-        (var(--fluid-screen) - (var(--fluid-min-width) * 1rem)) /
-            (var(--fluid-max-width) - var(--fluid-min-width))
-    );
+    /* ----- ALPHA */
+    --color-alpha-0: hsl(var(--hue-alpha), 100%, 10%);
+    --color-alpha-50: hsl(var(--hue-alpha), 100%, 50%);
+    --color-alpha-100: hsl(var(--hue-alpha), 100%, 90%);
 
-    --fluid-max-negative: (1 / var(--fluid-max-ratio) / var(--fluid-max-ratio));
-    --fluid-min-negative: (1 / var(--fluid-min-ratio) / var(--fluid-min-ratio));
+    /* ----- BETA */
+    --color-beta-0: hsl(var(--hue-beta), 100%, 10%);
+    --color-beta-50: hsl(var(--hue-beta), 100%, 50%);
+    --color-beta-100: hsl(var(--hue-beta), 100%, 90%);
 
-    --fluid-min-scale--1: var(--fluid-min-ratio) * var(--fluid-min-negative);
-    --fluid-max-scale--1: var(--fluid-max-ratio) * var(--fluid-max-negative);
-    --fluid-min-size--1: var(--fluid-min-size) * var(--fluid-min-scale--1);
-    --fluid-max-size--1: var(--fluid-max-size) * var(--fluid-max-scale--1);
-    --step--1: calc(
-        (var(--fluid-min-size--1) * 1rem) +
-            (var(--fluid-max-size--1) - var(--fluid-min-size--1)) *
-            var(--fluid-bp)
-    );
+    /* ----- GAMMA */
+    --color-gamma-0: hsl(var(--hue-gamma), 100%, 10%);
+    --color-gamma-50: hsl(var(--hue-gamma), 100%, 50%);
+    --color-gamma-100: hsl(var(--hue-gamma), 100%, 90%);
 
-    --fluid-min-scale-0: var(--fluid-min-ratio);
-    --fluid-max-scale-0: var(--fluid-max-ratio);
-    --fluid-min-size-0: var(--fluid-min-size);
-    --fluid-max-size-0: var(--fluid-max-size);
-    --step-0: calc(
-        (var(--fluid-min-size-0) * 1rem) +
-            (var(--fluid-max-size-0) - var(--fluid-min-size-0)) *
-            var(--fluid-bp)
-    );
+    /* ----- NEUTRALS */
+    /* whites, greys, and blacks */
+    --color-neutral-0: hsl(var(--hue-alpha), 10%, 10%);
+    --color-neutral-50: hsl(var(--hue-alpha), 10%, 50%);
+    --color-neutral-100: hsl(var(--hue-alpha), 10%, 90%);
 
-    --fluid-min-scale-1: var(--fluid-min-scale-0) * var(--fluid-min-ratio);
-    --fluid-max-scale-1: var(--fluid-max-scale-0) * var(--fluid-max-ratio);
-    --fluid-min-size-1: var(--fluid-min-size) * var(--fluid-min-scale-0);
-    --fluid-max-size-1: var(--fluid-max-size) * var(--fluid-max-scale-0);
-    --step-1: calc(
-        (var(--fluid-min-size-1) * 1rem) +
-            (var(--fluid-max-size-1) - var(--fluid-min-size-1)) *
-            var(--fluid-bp)
-    );
-
-    --fluid-min-scale-2: var(--fluid-min-scale-1) * var(--fluid-min-ratio);
-    --fluid-max-scale-2: var(--fluid-max-scale-1) * var(--fluid-max-ratio);
-    --fluid-min-size-2: var(--fluid-min-size) * var(--fluid-min-scale-1);
-    --fluid-max-size-2: var(--fluid-max-size) * var(--fluid-max-scale-1);
-    --step-2: calc(
-        (var(--fluid-min-size-2) * 1rem) +
-            (var(--fluid-max-size-2) - var(--fluid-min-size-2)) *
-            var(--fluid-bp)
-    );
-
-    --fluid-min-scale-3: var(--fluid-min-scale-2) * var(--fluid-min-ratio);
-    --fluid-max-scale-3: var(--fluid-max-scale-2) * var(--fluid-max-ratio);
-    --fluid-min-size-3: var(--fluid-min-size) * var(--fluid-min-scale-2);
-    --fluid-max-size-3: var(--fluid-max-size) * var(--fluid-max-scale-2);
-    --step-3: calc(
-        (var(--fluid-min-size-3) * 1rem) +
-            (var(--fluid-max-size-3) - var(--fluid-min-size-3)) *
-            var(--fluid-bp)
-    );
-
-    --fluid-min-scale-4: var(--fluid-min-scale-3) * var(--fluid-min-ratio);
-    --fluid-max-scale-4: var(--fluid-max-scale-3) * var(--fluid-max-ratio);
-    --fluid-min-size-4: var(--fluid-min-size) * var(--fluid-min-scale-3);
-    --fluid-max-size-4: var(--fluid-max-size) * var(--fluid-max-scale-3);
-    --step-4: calc(
-        (var(--fluid-min-size-4) * 1rem) +
-            (var(--fluid-max-size-4) - var(--fluid-min-size-4)) *
-            var(--fluid-bp)
-    );
-
-    --fluid-min-scale-5: var(--fluid-min-scale-4) * var(--fluid-min-ratio);
-    --fluid-max-scale-5: var(--fluid-max-scale-4) * var(--fluid-max-ratio);
-    --fluid-min-size-5: var(--fluid-min-size) * var(--fluid-min-scale-4);
-    --fluid-max-size-5: var(--fluid-max-size) * var(--fluid-max-scale-4);
-    --step-5: calc(
-        (var(--fluid-min-size-5) * 1rem) +
-            (var(--fluid-max-size-5) - var(--fluid-min-size-5)) *
-            var(--fluid-bp)
-    );
+    /* ----- STATES */
+    --color-error-50: red;
+    --color-warning-50: yellow;
+    --color-success-50: green;
 }
 
-@media screen and (min-width: 1500px) {
-    :root {
-        --fluid-screen: calc(var(--fluid-max-width) * 1rem);
-    }
-}
+/*
+-----
+SETTINGS/FONTS
+-----
+*/
+
+/* add @font-face declarations here */
+
+/* and set up variables for fonts in :root here */
+
+/*
+-----
+SETTINGS/VARIABLES
+-----
+*/
+
+/* other misc global variables (e.g. reading-width, etc.) will be set on :root here */
 
 /*
 -----
@@ -130,7 +116,7 @@ BASE/BASE
 */
 
 body {
-    font-size: var(--step-0);
+    font-size: var(--size-50);
 }
 
 /*
@@ -262,25 +248,25 @@ h6 {
 }
 
 h1 {
-    font-size: var(--step-5);
+    font-size: var(--size-h1);
 }
 
 h2 {
-    font-size: var(--step-4);
+    font-size: var(--size-h2);
 }
 
 h3 {
-    font-size: var(--step-3);
+    font-size: var(--size-h3);
 }
 
 h4 {
-    font-size: var(--step-2);
+    font-size: var(--size-h4);
 }
 
 h5 {
-    font-size: var(--step-1);
+    font-size: var(--size-h5);
 }
 
 h6 {
-    font-size: var(--step-0);
+    font-size: var(--size-h6);
 }
