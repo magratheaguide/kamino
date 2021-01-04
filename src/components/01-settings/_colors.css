@@ -1,0 +1,38 @@
+/*
+-----
+SETTINGS/COLORS
+-----
+*/
+
+:root {
+    /* ----- HUES */
+    --hue-alpha: 45;
+    --hue-beta: 90;
+    --hue-gamma: 135;
+
+    /* ----- ALPHA */
+    --color-alpha-0: hsl(var(--hue-alpha), 100%, 10%);
+    --color-alpha-50: hsl(var(--hue-alpha), 100%, 50%);
+    --color-alpha-100: hsl(var(--hue-alpha), 100%, 90%);
+
+    /* ----- BETA */
+    --color-beta-0: hsl(var(--hue-beta), 100%, 10%);
+    --color-beta-50: hsl(var(--hue-beta), 100%, 50%);
+    --color-beta-100: hsl(var(--hue-beta), 100%, 90%);
+
+    /* ----- GAMMA */
+    --color-gamma-0: hsl(var(--hue-gamma), 100%, 10%);
+    --color-gamma-50: hsl(var(--hue-gamma), 100%, 50%);
+    --color-gamma-100: hsl(var(--hue-gamma), 100%, 90%);
+
+    /* ----- NEUTRALS */
+    /* whites, greys, and blacks */
+    --color-neutral-0: hsl(var(--hue-alpha), 10%, 10%);
+    --color-neutral-50: hsl(var(--hue-alpha), 10%, 50%);
+    --color-neutral-100: hsl(var(--hue-alpha), 10%, 90%);
+
+    /* ----- STATES */
+    --color-error-50: red;
+    --color-warning-50: yellow;
+    --color-success-50: green;
+}
