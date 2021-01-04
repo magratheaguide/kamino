@@ -30,6 +30,7 @@ rules:
         - error
         - always-multiline
     no-console: warn
+    no-tabs: error
     no-template-curly-in-string: warn
     no-useless-concat: error
     prefer-template: error
