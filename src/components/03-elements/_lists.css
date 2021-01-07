@@ -1,0 +1,14 @@
+/*
+-----
+ELEMENTS/LISTS
+-----
+*/
+
+ul[role="list"] {
+    /*
+      role="list" is required in the html for 
+      accessibility when removing list styles,
+      see https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+      */
+    list-style: none;
+}
