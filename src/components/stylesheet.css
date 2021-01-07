@@ -27,4 +27,5 @@ TODO: add other team members, credits, license info, etc.
 @import "03-elements/_headings.css";
 @import "03-elements/_lists.css";
 
+@import "08-overrides/_sizes.css";
 @import "08-overrides/_hide.css";

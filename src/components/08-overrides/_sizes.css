@@ -1,0 +1,33 @@
+/*
+-----
+OVERRIDE/SIZES
+-----
+*/
+
+.override-size-40 {
+    font-size: var(--size-40) !important;
+}
+
+.override-size-50 {
+    font-size: var(--size-50) !important;
+}
+
+.override-size-60 {
+    font-size: var(--size-60) !important;
+}
+
+.override-size-70 {
+    font-size: var(--size-70) !important;
+}
+
+.override-size-80 {
+    font-size: var(--size-80) !important;
+}
+
+.override-size-90 {
+    font-size: var(--size-90) !important;
+}
+
+.override-size-100 {
+    font-size: var(--size-100) !important;
+}
