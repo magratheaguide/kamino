@@ -9,7 +9,7 @@ SETTINGS/SIZES
     --size-scale: 1.2;
 
     --size-40: calc(var(--size-50) / var(--size-scale));
-    --size-50: 1rem;
+    --size-50: 1.125rem;
     --size-60: calc(var(--size-50) * var(--size-scale));
     --size-70: calc(var(--size-60) * var(--size-scale));
     --size-80: calc(var(--size-70) * var(--size-scale));
@@ -32,4 +32,10 @@ SETTINGS/SIZES
     --gap-80: var(--size-80);
     --gap-90: var(--size-90);
     --gap-100: var(--size-100);
+}
+
+@supports (font-size: clamp(1rem, 1rem + 0.25vw, 2rem)) {
+    :root {
+        --size-50: clamp(1rem, 1rem + 0.25vw, 2rem);
+    }
 }
