@@ -21,7 +21,7 @@ TODO: add other team members, credits, license info, etc.
 @import "01-settings/_fonts.css";
 @import "01-settings/_variables.css";
 
-@import "02-base/_base.css";
 @import "02-base/_reset.css";
+@import "02-base/_body.css";
 
 @import "03-elements/_headings.css";

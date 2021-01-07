@@ -111,16 +111,6 @@ SETTINGS/VARIABLES
 
 /*
 -----
-BASE/BASE
------
-*/
-
-body {
-    font-size: var(--size-50);
-}
-
-/*
------
 BASE/RESET
 Modern CSS Reset: https://github.com/hankchizljaw/modern-css-reset
 -----
@@ -230,6 +220,16 @@ select {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/*
+-----
+BASE/BODY
+-----
+*/
+
+body {
+    font-size: var(--size-50);
 }
 
 /*
